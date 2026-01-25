@@ -132,15 +132,14 @@
       color: #0b1220;
     }
 
-    /* ✅ Match Main Page .hero-desc typography + max-width behavior */
     .hero-desc{
-      margin: 0 auto 14px auto; /* match main page */
+      margin: 0 auto 14px auto;
       max-width: 78ch;
       font-size: 18px;
       line-height: 1.7;
       color: var(--muted);
       font-weight: 500;
-      text-align: center; /* match main page explicitly */
+      text-align: center;
     }
 
     /* Buttons */
@@ -190,9 +189,8 @@
     section:first-of-type{ margin-top: 12px; }
     section{ scroll-margin-top: calc(var(--topbarH) + var(--anchorGap)); }
 
-    /* ✅ Match Main Page section headline sizing + underline rule */
     h2{
-      margin: 0 0 14px 0; /* main page spec */
+      margin: 0 0 14px 0;
       font-size: 24px;
       line-height: 1.2;
       letter-spacing: -0.5px;
@@ -204,10 +202,10 @@
     h2::after{
       content:"";
       display:block;
-      width: 140px; /* main page spec */
+      width: 140px;
       height: 1px;
-      margin: 12px auto 0; /* main page spec */
-      background: rgba(15, 23, 42, 0.14); /* main page spec */
+      margin: 12px auto 0;
+      background: rgba(15, 23, 42, 0.14);
       border-radius: 999px;
     }
 
@@ -216,7 +214,6 @@
       margin: 0 auto;
     }
 
-    /* Centered “subtitle” lines */
     .section-summary{
       margin: 0 0 12px 0;
       font-size: 18px;
@@ -258,7 +255,6 @@
     ul.list li{ margin: 8px 0; }
     ul.list li::marker{ color: rgba(100,116,139,.78); }
 
-    /* Two-column lists */
     ul.list.two-col{
       column-count: 2;
       column-gap: 40px;
@@ -272,7 +268,6 @@
       ul.list.two-col{ column-count: 1; }
     }
 
-    /* Divider between major groups */
     .section-divider{
       margin: 26px auto 0;
       max-width: 78ch;
@@ -281,7 +276,6 @@
       border-radius: 999px;
     }
 
-    /* Transition divider between System Index intro and first inventory section */
     .toc-transition{
       margin: 22px auto 0;
       max-width: 78ch;
@@ -290,7 +284,6 @@
       border-radius: 999px;
     }
 
-    /* Final sentence spacing */
     .final-confirmation{
       margin-top: 30px;
       margin-bottom: 26px;
@@ -335,8 +328,6 @@
       .hero-desc{ font-size: 16px; }
       .btn{ width: 100%; }
       section{ margin-top: 34px; }
-      /* NOTE: Do NOT override h2::after width here.
-         Keep headline underline uniform across pages (140px). */
       .footer{ margin-top: 28px; }
       .footer-links{ gap: 12px; }
     }
@@ -360,7 +351,6 @@
       <header>
         <h1>Full System Table of Contents</h1>
 
-        <!-- COPY LOCKED -->
         <p class="hero-desc">
           This is the complete structural index of what’s included in The Home Services Marketing System. It’s provided here so you can validate scope before purchase.
         </p>
@@ -370,8 +360,6 @@
         <section id="toc-intro">
           <h2>System Index</h2>
           <div class="section-inner">
-
-            <!-- Centered, left-aligned text box (kept as-is) -->
             <div style="max-width: 86ch; margin: 0 auto;">
               <p class="prose" style="text-align:left; line-height:1.65;">
                 Each item below represents a standardized base format intended to be duplicated and reused across services and campaigns, with structural decisions made once and applied consistently.
@@ -435,43 +423,22 @@
           <div class="section-inner">
             <p class="section-summary">15 print-ready templates covering core home services marketing materials.</p>
 
-            <h3>Service Flyers (2)</h3>
             <ul class="list two-col">
               <li>Service Flyer — Letter (8.5×11)</li>
               <li>Service Flyer — Half Sheet (5.5×8.5)</li>
-            </ul>
-
-            <h3>Postcards / Mailers (3)</h3>
-            <ul class="list two-col">
+              <li>Door Hanger — Service Callout (3.5×8.5)</li>
+              <li>Door Hanger — Emergency / Seasonal (3.5×8.5)</li>
               <li>Service Postcard — 4×6</li>
               <li>Service Postcard — 5×7</li>
               <li>Seasonal Maintenance Mailer — 5×7</li>
-            </ul>
-
-            <h3>Signage (2)</h3>
-            <ul class="list two-col">
               <li>Job Site / Yard Sign — 18×24</li>
               <li>Window / Vehicle Notice — 12×18</li>
-            </ul>
-
-            <h3>Business Identity (1)</h3>
-            <ul class="list">
               <li>Business Card — (3.5×2)</li>
-            </ul>
-
-            <h3>Client Outreach (5)</h3>
-            <ul class="list two-col">
               <li>Thank You / Review Request Handout — 5×7</li>
               <li>Estimate / Invoice Stuffer — Half Sheet (5.5×8.5)</li>
               <li>Referral Card — 5×7</li>
               <li>Missed You / We Tried to Reach You — Half Sheet (5.5×8.5)</li>
               <li>Job Complete / Next Steps Handout — Letter (8.5×11)</li>
-            </ul>
-
-            <h3>Door-to-Door Outreach (2)</h3>
-            <ul class="list two-col">
-              <li>Door Hanger — Service Callout (3.5×8.5)</li>
-              <li>Door Hanger — Emergency / Seasonal (3.5×8.5)</li>
             </ul>
 
             <div class="section-divider" aria-hidden="true"></div>
@@ -515,7 +482,7 @@
         </section>
 
         <section id="documentation-support">
-          <h2>Documentation & Support</h2>
+          <h2>Documentation &amp; Support</h2>
           <div class="section-inner">
             <p class="section-summary">5 core documents defining system usage, standards, and troubleshooting.</p>
 
@@ -530,7 +497,6 @@
             <p class="final-confirmation">
               This table reflects the full system as delivered. No subscriptions. No required updates.
             </p>
-
           </div>
         </section>
 
