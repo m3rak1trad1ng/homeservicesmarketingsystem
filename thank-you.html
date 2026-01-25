@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Thank You — The Real Estate Marketing System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Thank you for your purchase. Your access to The Real Estate Marketing System is confirmed. Review next steps for access and setup." />
+
+  <!-- Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Neutral Graphite (match your other pages) */
+      --bg: #d0d4da;
+      --frame: #edf0f4;
+      --frameBorder: rgba(15, 23, 42, 0.35);
+      --text: #0f172a;
+      --muted: rgba(15, 23, 42, 0.72);
+      --muted2: rgba(15, 23, 42, 0.58);
+
+      /* ✅ UPDATED BLUE (lighter + obvious) */
+      --accent: #3E6A9A;
+      --accentHover: #345F89;
+      --accentText: #ffffff;
+
+      --radiusOuter: 26px;
+      --radiusInner: 18px;
+      --shadow: 0 32px 90px rgba(15, 23, 42, 0.22);
+
+      --maxW: 980px;
+      --topbarH: 52px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Top nav (consistent across pages) */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(208, 212, 218, 0.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148,163,184,.45);
+    }
+    .topbar-inner{
+      max-width: var(--maxW);
+      margin: 0 auto;
+      padding: 8px 18px;
+      min-height: var(--topbarH);
+      display: flex;
+      justify-content: center;
+      gap: 8px 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Match site nav pill style */
+    .nav{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      align-items:center;
+      justify-content:center;
+    }
+    .nav a{
+      font-size: 13px;
+      color: rgba(15,23,42,.72);
+      text-decoration: none;
+      font-weight: 650;
+      padding: 7px 10px;
+      border-radius: 999px;
+      transition: background .12s ease, color .12s ease;
+    }
+    .nav a:hover{
+      background: rgba(15,23,42,.08);
+      color: rgba(15,23,42,.92);
+    }
+    .nav a.active{
+      background: rgba(62,106,154,.18);
+      color: rgba(62,106,154,.98);
+    }
+
+    /* Frame */
+    .wrap{
+      max-width: var(--maxW);
+      margin: 22px auto 34px auto;
+      padding: 0 18px;
+    }
+
+    .frame{
+      background: var(--frame);
+      border: 1px solid var(--frameBorder);
+      border-radius: var(--radiusOuter);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .frame-inner{
+      padding: 40px 54px 30px 54px;
+    }
+
+    /* Typography */
+    h1{
+      margin: 0 0 10px 0;
+      font-size: 40px; /* ✅ slightly smaller for a cleaner look */
+      line-height: 1.08;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: -0.7px;
+      color: #0b1220;
+    }
+
+    .lede{
+      margin: 0 auto 12px auto;
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 500;
+    }
+    .lede strong{ font-weight: 800; color: rgba(15, 23, 42, 0.86); }
+
+    /* Sections */
+    .section{
+      margin: 26px auto 0 auto;
+      max-width: 760px;
+    }
+
+    .section h2{
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0 0 14px 0;
+      text-align: center;
+      position: relative;
+      letter-spacing: -0.2px;
+      color: #0b1220;
+    }
+    .section h2::after{
+      content:"";
+      display:block;
+      width: 140px;
+      height: 1px;
+      background: rgba(15, 23, 42, 0.14);
+      margin: 12px auto 0 auto;
+      border-radius: 999px;
+    }
+
+    ol.steps{
+      margin: 18px 0 0 0;
+      padding: 0 0 0 22px;
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    ol.steps li{ margin: 10px 0; }
+    ol.steps strong{ font-weight: 800; }
+
+    /* Notice (subtle, consistent) */
+    .notice{
+      margin: 18px auto 0 auto;
+      padding: 14px 16px;
+      border: 1px solid rgba(15, 23, 42, 0.14);
+      border-radius: var(--radiusInner);
+      color: var(--muted);
+      background: rgba(237, 240, 244, 0.45);
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 760px;
+    }
+
+    /* Footer */
+    .footer{
+      border-top: 1px solid rgba(148,163,184,.45);
+      margin-top: 34px;
+      padding: 18px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      color: rgba(15, 23, 42, 0.62);
+      font-size: 13px;
+      flex-wrap: wrap;
+    }
+    .footer a{
+      color: rgba(15, 23, 42, 0.72);
+      text-decoration: none;
+      font-weight: 800;
+      margin-right: 14px;
+    }
+    .footer a:last-child{ margin-right: 0; }
+    .footer a:hover{
+      color: rgba(15, 23, 42, 0.92);
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px){
+      h1{ font-size: 32px; }
+      .lede{ font-size: 16px; }
+      .frame-inner{ padding: 30px 22px 24px 22px; }
+      .footer{ padding: 16px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Navigation (post-purchase) -->
+  <div class="topbar" id="topbar">
+    <div class="topbar-inner" id="topbar-inner">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/index.html">Home</a>
+        <a href="/tableofcontents.html">Table of Contents</a>
+        <a href="/faq/">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="frame">
+      <div class="frame-inner">
+        <h1>Purchase Complete — Thank You</h1>
+
+        <p class="lede">
+          Thank you for your purchase. Your access to <strong>The Real Estate Marketing System</strong> is now confirmed.
+          Access and delivery instructions are provided via your purchase confirmation email.
+        </p>
+
+        <section class="section" aria-label="Next Steps">
+          <h2>Next Steps</h2>
+
+          <ol class="steps">
+            <li><strong>Security note:</strong> Access links are delivered only via your confirmation email and are not shown on this page.</li>
+            <li><strong>Check your purchase confirmation email.</strong> It contains your delivery link and instructions to duplicate the system into your Canva account.</li>
+            <li><strong>If you don’t see it within a few minutes,</strong> check Spam/Promotions and search for “Operational Systems” or “Real Estate Marketing System.”</li>
+            <li><strong>Duplicate the system into your Canva account.</strong> You’ll be prompted to copy the full system into your own workspace. A free Canva account is sufficient.</li>
+            <li><strong>Complete initial setup once.</strong> Apply your logo, colors, and fonts, then duplicate templates as needed for ongoing use.</li>
+          </ol>
+
+          <div class="notice">
+            If you still can’t locate the confirmation email, contact support and include the email used at checkout, approximate purchase time, and last 4 digits of the card so we can locate your order quickly.
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div>© <a href="https://operational-systems.com/" target="_blank" rel="noopener noreferrer">Operational Systems, LLC</a></div>
+        <div>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      // Keep --topbarH accurate (same pattern as your other pages)
+      const topbar = document.getElementById('topbar');
+      function getTopbarH(){
+        if (!topbar) return 52;
+        return Math.ceil(topbar.getBoundingClientRect().height);
+      }
+      function setTopbarH(){
+        const h = getTopbarH();
+        document.documentElement.style.setProperty('--topbarH', h + 'px');
+        return h;
+      }
+      setTopbarH();
+      requestAnimationFrame(setTopbarH);
+      window.addEventListener('load', setTopbarH);
+      window.addEventListener('resize', setTopbarH);
+    })();
+  </script>
+</body>
+</html>
