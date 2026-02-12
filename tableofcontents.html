@@ -33,14 +33,6 @@
       --topbarH: 52px;
       --anchorGap: 14px;
 
-      /* ================================
-         GLOBAL RHYTHM RULE (LOCKED)
-         Use a 12px baseline rhythm for vertical spacing.
-         When adjusting spacing later, change margins/padding in
-         increments of 12px (12/24/36/48...) unless there is a
-         clear, intentional exception.
-         (Defining variable only — does NOT change layout by itself.)
-      ================================= */
       --rhythm: 12px;
     }
 
@@ -142,47 +134,6 @@
       text-align: center;
     }
 
-    /* Buttons */
-    .actions{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items:center;
-      justify-content: center;
-      margin-top: 6px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 800;
-      font-size: 14px;
-      letter-spacing: .2px;
-      text-decoration: none;
-      background: var(--accent);
-      color: var(--accentText);
-      border: 1px solid rgba(0,0,0,.08);
-      box-shadow: 0 14px 30px rgba(62,106,154,.24);
-      transition: transform .06s ease, box-shadow .12s ease, background .12s ease;
-      min-width: 0;
-    }
-    .btn:hover{
-      background: var(--accentHover);
-      box-shadow: 0 16px 34px rgba(62,106,154,.28);
-    }
-    .btn:active{ transform: translateY(1px); }
-
-    .btn.subtle{
-      box-shadow: 0 12px 26px rgba(15,23,42,.14);
-      background: #0f172a;
-      color: #fff;
-    }
-    .btn.subtle:hover{
-      box-shadow: 0 14px 30px rgba(15,23,42,.16);
-    }
-
     /* Sections */
     main{ margin-top: 18px; }
     section{ margin-top: 38px; }
@@ -226,14 +177,6 @@
       margin-right: auto;
     }
 
-    .prose{
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.75;
-      color: var(--muted);
-      text-align: left;
-    }
-
     h3{
       margin: 18px 0 10px 0;
       font-size: 16px;
@@ -255,9 +198,11 @@
     ul.list li{ margin: 8px 0; }
     ul.list li::marker{ color: rgba(100,116,139,.78); }
 
+    /* ✅ Force LEFT column to fill first (prevents “right-heavy” balancing) */
     ul.list.two-col{
       column-count: 2;
       column-gap: 40px;
+      column-fill: auto;
     }
     ul.list.two-col li{
       break-inside: avoid;
@@ -268,7 +213,7 @@
       ul.list.two-col{ column-count: 1; }
     }
 
-    /* ✅ Social-only balanced columns (does NOT affect other sections) */
+    /* ✅ Social-only two explicit columns (unchanged behavior, but clearer layout control) */
     .two-col-wrap{
       display:flex;
       gap: 40px;
@@ -341,7 +286,6 @@
       .wrap{ padding: 16px 16px 30px; }
       h1{ font-size: 32px; letter-spacing: -0.7px; }
       .hero-desc{ font-size: 16px; }
-      .btn{ width: 100%; }
       section{ margin-top: 34px; }
       .footer{ margin-top: 28px; }
       .footer-links{ gap: 12px; }
@@ -389,7 +333,7 @@
           </div>
         </section>
 
-        <!-- ✅ Social stays as-is (your current preferred format) -->
+        <!-- SOCIAL (kept format, reordered for readability/flow) -->
         <section id="social">
           <h2>Social Media</h2>
           <div class="section-inner">
@@ -399,23 +343,23 @@
             <div class="two-col-wrap">
               <ul class="list">
                 <li>Service Available</li>
-                <li>Emergency / 24-Hour Service</li>
                 <li>Same-Day Service Available</li>
                 <li>Scheduling</li>
-                <li>Seasonal Service Promotion</li>
-                <li>Limited-Time Offer</li>
-                <li>New Customer Offer</li>
                 <li>Free Estimate / Quote</li>
                 <li>Financing Available</li>
                 <li>Service Plan Promotion</li>
+                <li>Seasonal Service Promotion</li>
+                <li>Limited-Time Offer</li>
+                <li>New Customer Offer</li>
+                <li>Emergency / 24-Hour Service</li>
               </ul>
 
               <ul class="list">
                 <li>Before / After</li>
                 <li>Customer Testimonial</li>
-                <li>Technician Spotlight</li>
-                <li>Licensed &amp; Insured / Certified</li>
                 <li>Reviews</li>
+                <li>Licensed &amp; Insured / Certified</li>
+                <li>Technician Spotlight</li>
                 <li>Service Area / Neighborhood</li>
                 <li>Local Job Highlight</li>
                 <li>Recruiting</li>
@@ -443,7 +387,7 @@
           </div>
         </section>
 
-        <!-- ✅ Reverted sections (back to original site flow) -->
+        <!-- REVERTED / ORIGINAL STYLE FOR EVERYTHING BELOW -->
         <section id="print">
           <h2>Print</h2>
           <div class="section-inner">
