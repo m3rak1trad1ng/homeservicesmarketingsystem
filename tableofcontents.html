@@ -33,6 +33,14 @@
       --topbarH: 52px;
       --anchorGap: 14px;
 
+      /* ================================
+         GLOBAL RHYTHM RULE (LOCKED)
+         Use a 12px baseline rhythm for vertical spacing.
+         When adjusting spacing later, change margins/padding in
+         increments of 12px (12/24/36/48...) unless there is a
+         clear, intentional exception.
+         (Defining variable only — does NOT change layout by itself.)
+      ================================= */
       --rhythm: 12px;
     }
 
@@ -134,6 +142,47 @@
       text-align: center;
     }
 
+    /* Buttons */
+    .actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items:center;
+      justify-content: center;
+      margin-top: 6px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .2px;
+      text-decoration: none;
+      background: var(--accent);
+      color: var(--accentText);
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 14px 30px rgba(62,106,154,.24);
+      transition: transform .06s ease, box-shadow .12s ease, background .12s ease;
+      min-width: 0;
+    }
+    .btn:hover{
+      background: var(--accentHover);
+      box-shadow: 0 16px 34px rgba(62,106,154,.28);
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    .btn.subtle{
+      box-shadow: 0 12px 26px rgba(15,23,42,.14);
+      background: #0f172a;
+      color: #fff;
+    }
+    .btn.subtle:hover{
+      box-shadow: 0 14px 30px rgba(15,23,42,.16);
+    }
+
     /* Sections */
     main{ margin-top: 18px; }
     section{ margin-top: 38px; }
@@ -177,6 +226,14 @@
       margin-right: auto;
     }
 
+    .prose{
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted);
+      text-align: left;
+    }
+
     h3{
       margin: 18px 0 10px 0;
       font-size: 16px;
@@ -198,11 +255,9 @@
     ul.list li{ margin: 8px 0; }
     ul.list li::marker{ color: rgba(100,116,139,.78); }
 
-    /* ✅ Force LEFT column to fill first (prevents “right-heavy” balancing) */
     ul.list.two-col{
       column-count: 2;
       column-gap: 40px;
-      column-fill: auto;
     }
     ul.list.two-col li{
       break-inside: avoid;
@@ -213,11 +268,11 @@
       ul.list.two-col{ column-count: 1; }
     }
 
-    /* ✅ Social-only two explicit columns (unchanged behavior, but clearer layout control) */
+    /* Manual two-column wrapper (used where you want left column heavier, never auto-balanced) */
     .two-col-wrap{
       display:flex;
       gap: 40px;
-      align-items: flex-start;
+      align-items:flex-start;
     }
     .two-col-wrap ul.list{
       flex: 1;
@@ -286,6 +341,7 @@
       .wrap{ padding: 16px 16px 30px; }
       h1{ font-size: 32px; letter-spacing: -0.7px; }
       .hero-desc{ font-size: 16px; }
+      .btn{ width: 100%; }
       section{ margin-top: 34px; }
       .footer{ margin-top: 28px; }
       .footer-links{ gap: 12px; }
@@ -333,7 +389,7 @@
           </div>
         </section>
 
-        <!-- SOCIAL (kept format, reordered for readability/flow) -->
+        <!-- SOCIAL (keep as-is) -->
         <section id="social">
           <h2>Social Media</h2>
           <div class="section-inner">
@@ -343,23 +399,22 @@
             <div class="two-col-wrap">
               <ul class="list">
                 <li>Service Available</li>
+                <li>Emergency / 24-Hour Service</li>
                 <li>Same-Day Service Available</li>
                 <li>Scheduling</li>
-                <li>Free Estimate / Quote</li>
-                <li>Financing Available</li>
-                <li>Service Plan Promotion</li>
                 <li>Seasonal Service Promotion</li>
                 <li>Limited-Time Offer</li>
                 <li>New Customer Offer</li>
-                <li>Emergency / 24-Hour Service</li>
+                <li>Free Estimate / Quote</li>
+                <li>Financing Available</li>
+                <li>Service Plan Promotion</li>
               </ul>
-
               <ul class="list">
                 <li>Before / After</li>
                 <li>Customer Testimonial</li>
-                <li>Reviews</li>
-                <li>Licensed &amp; Insured / Certified</li>
                 <li>Technician Spotlight</li>
+                <li>Licensed &amp; Insured / Certified</li>
+                <li>Reviews</li>
                 <li>Service Area / Neighborhood</li>
                 <li>Local Job Highlight</li>
                 <li>Recruiting</li>
@@ -387,87 +442,108 @@
           </div>
         </section>
 
-        <!-- REVERTED / ORIGINAL STYLE FOR EVERYTHING BELOW -->
+        <!-- PRINT (reverted style, but LEFT column intentionally heavier) -->
         <section id="print">
           <h2>Print</h2>
           <div class="section-inner">
             <p class="section-summary">22 print-ready templates covering core home services marketing materials.</p>
 
-            <ul class="list two-col">
-              <li>Service Notice — 18×24</li>
-              <li>Authorized Access Only — 18×24</li>
-              <li>Active Work Area — 18×24</li>
-              <li>Service Notice — 12×18</li>
-              <li>Temporary Access Notice — 12×18</li>
-              <li>Active Work Area — 12×18</li>
-              <li>Service Overview Flyer — 8.5×11</li>
-              <li>Service Completion Handout — 8.5×11</li>
-              <li>Service Flyer — Half Sheet (5.5×8.5)</li>
-              <li>Estimate &amp; Invoice Overview Flyer — Half Sheet (5.5×8.5)</li>
-              <li>We Stopped By — Half Sheet (5.5×8.5)</li>
-              <li>Service Postcard — 5×7</li>
-              <li>Seasonal Maintenance Postcard — 5×7</li>
-              <li>Thank You Postcard — 5×7</li>
-              <li>Referral Postcard — 5×7</li>
-              <li>Service Postcard — 4×6</li>
-              <li>Door Hanger — General Service — 3.5×8.5</li>
-              <li>Door Hanger — Emergency / Seasonal — 3.5×8.5</li>
-              <li>Business Card — 3.5×2</li>
-              <li>Envelope — #10 (9.5×4.125)</li>
-              <li>Letterhead — 8.5×11</li>
-              <li>Letter — 8.5×11</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Notice — 18×24</li>
+                <li>Authorized Access Only — 18×24</li>
+                <li>Active Work Area — 18×24</li>
+                <li>Service Notice — 12×18</li>
+                <li>Temporary Access Notice — 12×18</li>
+                <li>Active Work Area — 12×18</li>
+                <li>Service Overview Flyer — 8.5×11</li>
+                <li>Service Completion Handout — 8.5×11</li>
+                <li>Service Flyer — Half Sheet (5.5×8.5)</li>
+                <li>Estimate &amp; Invoice Overview Flyer — Half Sheet (5.5×8.5)</li>
+                <li>We Stopped By — Half Sheet (5.5×8.5)</li>
+                <li>Service Postcard — 5×7</li>
+              </ul>
+
+              <ul class="list">
+                <li>Seasonal Maintenance Postcard — 5×7</li>
+                <li>Thank You Postcard — 5×7</li>
+                <li>Referral Postcard — 5×7</li>
+                <li>Service Postcard — 4×6</li>
+                <li>Door Hanger — General Service — 3.5×8.5</li>
+                <li>Door Hanger — Emergency / Seasonal — 3.5×8.5</li>
+                <li>Business Card — 3.5×2</li>
+                <li>Envelope — #10 (9.5×4.125)</li>
+                <li>Letterhead — 8.5×11</li>
+                <li>Letter — 8.5×11</li>
+              </ul>
+            </div>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
         </section>
 
+        <!-- EMAIL (reverted style, but LEFT column intentionally heavier) -->
         <section id="email">
           <h2>Email</h2>
           <div class="section-inner">
             <p class="section-summary">9 email templates built for repeat campaigns (600px width).</p>
 
-            <ul class="list two-col">
-              <li>Service Promotion — 600px</li>
-              <li>Seasonal Maintenance Reminder — 600px</li>
-              <li>Emergency Service Notice — 600px</li>
-              <li>Maintenance Plan Information — 600px</li>
-              <li>Review / Testimonial Request — 600px</li>
-              <li>Estimate Sent / Quote Follow-Up — 600px</li>
-              <li>Missed Call / We Tried to Reach You — 600px</li>
-              <li>Thanks for Your Business — 600px</li>
-              <li>Referral Request — 600px</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Promotion — 600px</li>
+                <li>Seasonal Maintenance Reminder — 600px</li>
+                <li>Emergency Service Notice — 600px</li>
+                <li>Maintenance Plan Information — 600px</li>
+                <li>Review / Testimonial Request — 600px</li>
+              </ul>
+
+              <ul class="list">
+                <li>Estimate Sent / Quote Follow-Up — 600px</li>
+                <li>Missed Call / We Tried to Reach You — 600px</li>
+                <li>Thanks for Your Business — 600px</li>
+                <li>Referral Request — 600px</li>
+              </ul>
+            </div>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
         </section>
 
+        <!-- PRESENTATIONS (reverted style, but LEFT column intentionally heavier) -->
         <section id="presentations">
           <h2>Presentations</h2>
           <div class="section-inner">
             <p class="section-summary">3 presentations (16:9) covering core service and plan explanation use cases.</p>
 
-            <ul class="list two-col">
-              <li>Service Overview (16:9)</li>
-              <li>Maintenance Plan Explanation (16:9)</li>
-              <li>Repair vs Replacement Cost (16:9)</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Overview (16:9)</li>
+                <li>Maintenance Plan Explanation (16:9)</li>
+              </ul>
+              <ul class="list">
+                <li>Repair vs Replacement Cost (16:9)</li>
+              </ul>
+            </div>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
         </section>
 
+        <!-- DOCS (reverted style, but LEFT column intentionally heavier) -->
         <section id="documentation-support">
           <h2>Documentation &amp; Support</h2>
           <div class="section-inner">
             <p class="section-summary">3 core documents defining system usage, standards, and troubleshooting.</p>
 
-            <ul class="list two-col">
-              <li>System Overview &amp; Setup (8.5×11)</li>
-              <li>Canva Editing Guide (8.5×11)</li>
-              <li>Brand &amp; Usage Standards (8.5×11)</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>System Overview &amp; Setup (8.5×11)</li>
+                <li>Canva Editing Guide (8.5×11)</li>
+              </ul>
+              <ul class="list">
+                <li>Brand &amp; Usage Standards (8.5×11)</li>
+              </ul>
+            </div>
 
             <p class="final-confirmation">
               This table reflects the full system as delivered. No subscriptions. No required updates.
