@@ -268,6 +268,25 @@
       ul.list.two-col{ column-count: 1; }
     }
 
+    /* ✅ OPTION A — True balanced columns (LOCKED TO TOC LISTS) */
+    .two-col-wrap{
+      display:flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .two-col-wrap ul.list{
+      flex: 1;
+      margin: 0;
+    }
+    @media (max-width: 820px){
+      .two-col-wrap{
+        display:block;
+      }
+      .two-col-wrap ul.list{
+        margin: 0;
+      }
+    }
+
     .section-divider{
       margin: 26px auto 0;
       max-width: 78ch;
@@ -380,33 +399,38 @@
             <p class="section-summary">28 standardized social templates across core posting formats.</p>
 
             <h3>Single Post Templates (23)</h3>
-            <ul class="list two-col">
-              <li>Service Available — Square</li>
-              <li>Service Available — Portrait</li>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Available — Square</li>
+                <li>Service Available — Portrait</li>
 
-              <li>Emergency / 24-Hour Service — Square</li>
-              <li>Emergency / 24-Hour Service — Story</li>
+                <li>Emergency / 24-Hour Service — Square</li>
+                <li>Emergency / 24-Hour Service — Story</li>
 
-              <li>Same-Day Service Available — Square</li>
-              <li>Scheduling — Square</li>
-              <li>Seasonal Service Promotion — Square</li>
-              <li>Limited-Time Offer — Square</li>
-              <li>New Customer Offer — Square</li>
-              <li>Free Estimate / Quote — Square</li>
-              <li>Financing Available — Square</li>
-              <li>Service Plan Promotion — Square</li>
-              <li>Before / After — Square</li>
-              <li>Customer Testimonial — Square</li>
-              <li>Technician Spotlight — Square</li>
-              <li>Licensed &amp; Insured / Certified — Square</li>
-              <li>Reviews — Square</li>
-              <li>Service Area / Neighborhood — Square</li>
-              <li>Local Job Highlight — Square</li>
-              <li>Recruiting — Square</li>
-              <li>Holiday / Seasonal — Square</li>
-              <li>FAQ — Square</li>
-              <li>Recruiting — Portrait</li>
-            </ul>
+                <li>Same-Day Service Available — Square</li>
+                <li>Scheduling — Square</li>
+                <li>Seasonal Service Promotion — Square</li>
+                <li>Limited-Time Offer — Square</li>
+                <li>New Customer Offer — Square</li>
+                <li>Free Estimate / Quote — Square</li>
+                <li>Financing Available — Square</li>
+                <li>Service Plan Promotion — Square</li>
+              </ul>
+
+              <ul class="list">
+                <li>Before / After — Square</li>
+                <li>Customer Testimonial — Square</li>
+                <li>Technician Spotlight — Square</li>
+                <li>Licensed &amp; Insured / Certified — Square</li>
+                <li>Reviews — Square</li>
+                <li>Service Area / Neighborhood — Square</li>
+                <li>Local Job Highlight — Square</li>
+                <li>Recruiting — Square</li>
+                <li>Holiday / Seasonal — Square</li>
+                <li>FAQ — Square</li>
+                <li>Recruiting — Portrait</li>
+              </ul>
+            </div>
 
             <h3>Social Carousels (5)</h3>
             <ul class="list">
@@ -426,37 +450,41 @@
           <div class="section-inner">
             <p class="section-summary">22 print-ready templates covering core home services marketing materials.</p>
 
-            <ul class="list two-col">
-              <li>Service Notice — 18×24</li>
-              <li>Authorized Access Only — 18×24</li>
-              <li>Active Work Area — 18×24</li>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Notice — 18×24</li>
+                <li>Authorized Access Only — 18×24</li>
+                <li>Active Work Area — 18×24</li>
 
-              <li>Service Notice — 12×18</li>
-              <li>Temporary Access Notice — 12×18</li>
-              <li>Active Work Area — 12×18</li>
+                <li>Service Notice — 12×18</li>
+                <li>Temporary Access Notice — 12×18</li>
+                <li>Active Work Area — 12×18</li>
 
-              <li>Service Overview Flyer — Letter (8.5×11)</li>
-              <li>Service Completion Handout — Letter (8.5×11)</li>
+                <li>Service Overview Flyer — Letter (8.5×11)</li>
+                <li>Service Completion Handout — Letter (8.5×11)</li>
 
-              <li>Service Flyer — Half Sheet (5.5×8.5)</li>
-              <li>Estimate &amp; Invoice Overview Flyer — Half Sheet (5.5×8.5)</li>
-              <li>We Stopped By — Half Sheet (5.5×8.5)</li>
+                <li>Service Flyer — Half Sheet (5.5×8.5)</li>
+                <li>Estimate &amp; Invoice Overview Flyer — Half Sheet (5.5×8.5)</li>
+                <li>We Stopped By — Half Sheet (5.5×8.5)</li>
+              </ul>
 
-              <li>Service Postcard — 5×7</li>
-              <li>Seasonal Maintenance Postcard — 5×7</li>
-              <li>Thank You Postcard — 5×7</li>
-              <li>Referral Postcard — 5×7</li>
+              <ul class="list">
+                <li>Service Postcard — 5×7</li>
+                <li>Seasonal Maintenance Postcard — 5×7</li>
+                <li>Thank You Postcard — 5×7</li>
+                <li>Referral Postcard — 5×7</li>
 
-              <li>Service Postcard — 4×6</li>
+                <li>Service Postcard — 4×6</li>
 
-              <li>Door Hanger — General Service (3.5×8.5)</li>
-              <li>Door Hanger — Emergency / Seasonal (3.5×8.5)</li>
+                <li>Door Hanger — General Service (3.5×8.5)</li>
+                <li>Door Hanger — Emergency / Seasonal (3.5×8.5)</li>
 
-              <li>Business Card — (3.5×2)</li>
-              <li>Envelope — #10 (9.5×4.125)</li>
-              <li>Letterhead — Letter (8.5×11)</li>
-              <li>Letter — Letter (8.5×11)</li>
-            </ul>
+                <li>Business Card — (3.5×2)</li>
+                <li>Envelope — #10 (9.5×4.125)</li>
+                <li>Letterhead — Letter (8.5×11)</li>
+                <li>Letter — Letter (8.5×11)</li>
+              </ul>
+            </div>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
@@ -467,17 +495,22 @@
           <div class="section-inner">
             <p class="section-summary">9 email templates built for repeat campaigns (600px width).</p>
 
-            <ul class="list two-col">
-              <li>Service Promotion</li>
-              <li>Seasonal Maintenance Reminder</li>
-              <li>Emergency Service Notice</li>
-              <li>Maintenance Plan Information</li>
-              <li>Review / Testimonial Request</li>
-              <li>Estimate Sent / Quote Follow-Up</li>
-              <li>Missed Call / We Tried to Reach You</li>
-              <li>Thanks for Your Business</li>
-              <li>Referral Request</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Promotion</li>
+                <li>Seasonal Maintenance Reminder</li>
+                <li>Emergency Service Notice</li>
+                <li>Maintenance Plan Information</li>
+                <li>Review / Testimonial Request</li>
+              </ul>
+
+              <ul class="list">
+                <li>Estimate Sent / Quote Follow-Up</li>
+                <li>Missed Call / We Tried to Reach You</li>
+                <li>Thanks for Your Business</li>
+                <li>Referral Request</li>
+              </ul>
+            </div>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
@@ -488,11 +521,16 @@
           <div class="section-inner">
             <p class="section-summary">3 presentations (16:9) covering core service and plan explanation use cases.</p>
 
-            <ul class="list two-col">
-              <li>Service Overview (16:9)</li>
-              <li>Maintenance Plan Explanation (16:9)</li>
-              <li>Repair vs Replacement Cost (16:9)</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>Service Overview (16:9)</li>
+                <li>Maintenance Plan Explanation (16:9)</li>
+              </ul>
+
+              <ul class="list">
+                <li>Repair vs Replacement Cost (16:9)</li>
+              </ul>
+            </div>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
@@ -503,11 +541,16 @@
           <div class="section-inner">
             <p class="section-summary">5 core documents defining system usage, standards, and troubleshooting.</p>
 
-            <ul class="list two-col">
-              <li>System Overview &amp; Setup (8.5×11)</li>
-              <li>Canva Editing Guide (8.5×11)</li>
-              <li>Brand &amp; Usage Standards (8.5×11)</li>
-            </ul>
+            <div class="two-col-wrap">
+              <ul class="list">
+                <li>System Overview &amp; Setup (8.5×11)</li>
+                <li>Canva Editing Guide (8.5×11)</li>
+              </ul>
+
+              <ul class="list">
+                <li>Brand &amp; Usage Standards (8.5×11)</li>
+              </ul>
+            </div>
 
             <p class="final-confirmation">
               This table reflects the full system as delivered. No subscriptions. No required updates.
