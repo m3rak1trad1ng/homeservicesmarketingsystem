@@ -255,7 +255,6 @@
     ul.list li{ margin: 8px 0; }
     ul.list li::marker{ color: rgba(100,116,139,.78); }
 
-    /* Default auto two-col list (kept for sections where it’s fine) */
     ul.list.two-col{
       column-count: 2;
       column-gap: 40px;
@@ -282,25 +281,6 @@
     @media (max-width: 820px){
       .two-col-wrap{ display:block; }
       .two-col-wrap ul.list{ margin: 0; }
-    }
-
-    /* Aligned bullets (name left, format+size right) */
-    .item{
-      display:flex;
-      gap: 14px;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-    .item .name{
-      flex: 1;
-      min-width: 0;
-      padding-right: 10px;
-    }
-    .item .meta{
-      white-space: nowrap;
-      color: rgba(15,23,42,.70);
-      font-weight: 650;
-      font-size: 14px;
     }
 
     .section-divider{
@@ -365,16 +345,6 @@
       section{ margin-top: 34px; }
       .footer{ margin-top: 28px; }
       .footer-links{ gap: 12px; }
-
-      /* Mobile: allow meta to wrap under name */
-      .item{
-        display:block;
-      }
-      .item .meta{
-        display:block;
-        margin-top: 4px;
-        white-space: normal;
-      }
     }
   </style>
 </head>
@@ -419,7 +389,7 @@
           </div>
         </section>
 
-        <!-- SOCIAL (use-case grouping + aligned sizes) -->
+        <!-- SOCIAL (RE-style bullets) -->
         <section id="social">
           <h2>Social Media</h2>
           <div class="section-inner">
@@ -427,46 +397,47 @@
 
             <h3>Single Post Templates (23)</h3>
             <ul class="list two-col">
-              <li><span class="item"><span class="name">Service Available</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Emergency / 24-Hour Service</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Same-Day Service Available</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Scheduling</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Seasonal Service Promotion</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Limited-Time Offer</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">New Customer Offer</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Free Estimate / Quote</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Financing Available</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Service Plan Promotion</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Before / After</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Customer Testimonial</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Technician Spotlight</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Licensed &amp; Insured / Certified</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Reviews</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Service Area / Neighborhood</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Local Job Highlight</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Recruiting</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Holiday / Seasonal</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">FAQ</span><span class="meta">Square (1080×1080)</span></span></li>
+              <li>Service Available — Square (1080×1080)</li>
+              <li>Service Available — Portrait (1080×1350)</li>
 
-              <li><span class="item"><span class="name">Service Available</span><span class="meta">Portrait (1080×1350)</span></span></li>
-              <li><span class="item"><span class="name">Recruiting</span><span class="meta">Portrait (1080×1350)</span></span></li>
-              <li><span class="item"><span class="name">Emergency / 24-Hour Service</span><span class="meta">Story (1080×1920)</span></span></li>
+              <li>Emergency / 24-Hour Service — Square (1080×1080)</li>
+              <li>Emergency / 24-Hour Service — Story (1080×1920)</li>
+
+              <li>Same-Day Service Available — Square (1080×1080)</li>
+              <li>Scheduling — Square (1080×1080)</li>
+              <li>Seasonal Service Promotion — Square (1080×1080)</li>
+              <li>Limited-Time Offer — Square (1080×1080)</li>
+              <li>New Customer Offer — Square (1080×1080)</li>
+              <li>Free Estimate / Quote — Square (1080×1080)</li>
+              <li>Financing Available — Square (1080×1080)</li>
+              <li>Service Plan Promotion — Square (1080×1080)</li>
+              <li>Before / After — Square (1080×1080)</li>
+              <li>Customer Testimonial — Square (1080×1080)</li>
+              <li>Technician Spotlight — Square (1080×1080)</li>
+              <li>Licensed &amp; Insured / Certified — Square (1080×1080)</li>
+              <li>Reviews — Square (1080×1080)</li>
+              <li>Service Area / Neighborhood — Square (1080×1080)</li>
+              <li>Local Job Highlight — Square (1080×1080)</li>
+              <li>Recruiting — Square (1080×1080)</li>
+              <li>Recruiting — Portrait (1080×1350)</li>
+              <li>Holiday / Seasonal — Square (1080×1080)</li>
+              <li>FAQ — Square (1080×1080)</li>
             </ul>
 
             <h3>Social Carousels (5)</h3>
             <ul class="list">
-              <li><span class="item"><span class="name">Service Breakdown Carousel</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Customer FAQ Carousel</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Before &amp; After Showcase Carousel</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Customer Testimonial Carousel</span><span class="meta">Square (1080×1080)</span></span></li>
-              <li><span class="item"><span class="name">Local Expert Tips Carousel</span><span class="meta">Square (1080×1080)</span></span></li>
+              <li>Service Breakdown Carousel — Square (1080×1080)</li>
+              <li>Customer FAQ Carousel — Square (1080×1080)</li>
+              <li>Before &amp; After Showcase Carousel — Square (1080×1080)</li>
+              <li>Customer Testimonial Carousel — Square (1080×1080)</li>
+              <li>Local Expert Tips Carousel — Square (1080×1080)</li>
             </ul>
 
             <div class="section-divider" aria-hidden="true"></div>
           </div>
         </section>
 
-        <!-- PRINT (reverted feel, left column intentionally heavier) -->
+        <!-- PRINT (left column intentionally heavier) -->
         <section id="print">
           <h2>Print</h2>
           <div class="section-inner">
@@ -506,7 +477,7 @@
           </div>
         </section>
 
-        <!-- EMAIL (reverted feel, left column intentionally heavier) -->
+        <!-- EMAIL (left column intentionally heavier) -->
         <section id="email">
           <h2>Email</h2>
           <div class="section-inner">
@@ -533,7 +504,7 @@
           </div>
         </section>
 
-        <!-- PRESENTATIONS (reverted feel, left column intentionally heavier) -->
+        <!-- PRESENTATIONS (left column intentionally heavier) -->
         <section id="presentations">
           <h2>Presentations</h2>
           <div class="section-inner">
@@ -554,7 +525,7 @@
           </div>
         </section>
 
-        <!-- DOCS (reverted feel, left column intentionally heavier) -->
+        <!-- DOCS (left column intentionally heavier) -->
         <section id="documentation-support">
           <h2>Documentation &amp; Support</h2>
           <div class="section-inner">
